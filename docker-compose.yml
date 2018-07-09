@@ -1,0 +1,12 @@
+version: '2'
+services:
+ app:
+  container_name: c-app
+  restart: always
+  build: ./
+  volumes:
+   - ./server:/data/app/server
+  ports:
+    - "3001:3001"
+  command: nodemon
+
